@@ -24,9 +24,6 @@ hs_err_pid*
 
 # gradle
 .gradle/
-gradle/
-gradlew
-gradlew.bat
 
 # IntelliJ
 .idea/
