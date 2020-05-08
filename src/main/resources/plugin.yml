@@ -1,0 +1,9 @@
+name: AntiSlime
+version: 1.0.0
+description: Prevent slimes from spawning in a given world.
+author: SirJosh3917
+main: com.sirjosh3917.java.antislime.AntiSlime
+
+commands:
+  antislime:
+    description: Toggles slimes from spawning in the world you're in.
