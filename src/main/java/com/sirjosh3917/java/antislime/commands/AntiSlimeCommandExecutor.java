@@ -49,6 +49,11 @@ public class AntiSlimeCommandExecutor implements CommandExecutor {
         return true;
     }
 
+    /**
+     * Small helper function to ensure that the status of if slimes will spawn or not is effectively conveyed.
+     * @param shouldPreventSlimeSpawning If slimes should be prevented from spawning.
+     * @return A color coded {@link String} to send to the user.
+     */
     private static String toFriendlyName(boolean shouldPreventSlimeSpawning) {
         if (shouldPreventSlimeSpawning) {
             return "enabled " + ChatColor.GREEN + "(Slimes will not spawn)";

@@ -51,6 +51,12 @@ public class AntiSlime extends JavaPlugin {
         // TODO: log the worlds it's enabled/disabled in
     }
 
+    /**
+     * Helper function to get the permission name of AntiSlime from a configuration file.
+     * @param section The {@link ConfigurationSection} to use when getting values from the config
+     * @param defaultConfiguration The default {@link YamlConfiguration} of AntiSlime.
+     * @return The name of the permission to use.
+     */
     private String getPermissionName(ConfigurationSection section, YamlConfiguration defaultConfiguration) {
         Object result = section.get("permission_name");
 
@@ -69,6 +75,11 @@ public class AntiSlime extends JavaPlugin {
         return "antislime";
     }
 
+    /**
+     * Loads the default configuration of AntiSlime from its resources.
+     * @return The default configuration of AntiSlime, from its resources.
+     * @throws IOException Thrown when reading the default configuration failed.
+     */
     private YamlConfiguration loadDefaultConfig() throws IOException {
         try (InputStream defaultConfigurationStream = this.getResource("config.yml")) {
             try (InputStreamReader inputStreamReader = new InputStreamReader(defaultConfigurationStream)) {
